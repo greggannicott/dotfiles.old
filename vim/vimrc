@@ -24,7 +24,9 @@ set incsearch " highlight pattern matches as you search
 " displaying text
 " -------------------------------------------------------------------------------------------------------------------
 
+set number " Display line numbers.
 set relativenumber " Display relative rather than absolute numbers. Makes jumping down/up lines with n+j or n+k much easier.
+                   " Note that as "set number" has been run, the actual line number will be displayed rather than 0.
 set scrolloff=3 " Number of screen lines to show around the cursor.
 set wrap " long lines wrap
 
