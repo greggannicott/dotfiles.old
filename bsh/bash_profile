@@ -13,9 +13,6 @@ export EDITOR=vim
 # Set a lazy alias to handle `ls -la`.
 alias l='ls -la'
 
-# I'm not sure why, but probaby safer that I don't take it out...
-alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
-
 # Enable tab complete for git.
 source ~/git-completion.bash
 
