@@ -225,6 +225,21 @@ nnoremap <leader>1 yypVr=
 nnoremap <leader>2 yypVr-
 
 " -------------------------------------------------------------------------------------------------------------------
+" Provide support for using Vim in ConEmu (with PowerShell)
+" -------------------------------------------------------------------------------------------------------------------
+
+if !empty($CONEMUBUILD)
+    set term=xterm
+    set t_Co=256
+    let &t_AB="\e[48;5;%dm"
+    let &t_AF="\e[38;5;%dm"
+    set bs=indent,eol,start
+    let g:solarized_termcolors=256
+    set background=light " 'dark' or 'light'; the background color brightness
+    colorscheme solarized
+endif
+
+" -------------------------------------------------------------------------------------------------------------------
 " Provide a way to overide these settings locally by creating a '.local' file.
 " -------------------------------------------------------------------------------------------------------------------
 if has("Win32")
