@@ -24,9 +24,9 @@ These instructions are for OS X and Linux. You're on your own with Windows.
 
 ## Vim Plugins Install
 
-Plugins are managed using `vundle`.
+Plugins are managed using [Vundle](https://github.com/VundleVim/Vundle.vim).
 
-If you haven't already done so, install `vundle` as follows:
+If you haven't already done so, install Vundle as follows:
 
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
