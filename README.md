@@ -8,8 +8,8 @@ Usage
 
 These instructions are for the Mac and Linux. You're on your own with Windows.
 
-Initial Install
----------------
+Initial Symlinks Creation
+-------------------------
 
 1. Open a terminal 
 1. `cd ~/`
@@ -23,14 +23,31 @@ Initial Install
 - Move aside any existing dot files to `~/dotfiles_old`.
 - Create symlinks to the relevant files in `~/dotfiles/`.
 
-Updating
---------
+Initial vim Plugins Install
+---------------------------
+
+Plugins are managed using `vundle`.
+
+If you haven't already done so, install `vundle` as follows:
+
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+Install the plugins listed in your `.vimrc` file by running:
+
+    vim +PluginInstall +qall
+
+Updating dotfiles
+-----------------
 
 This will get the latest versions from github, and take care of any newly added files.
 
 1. `cd ~/dotfiles`
 1. `git pull`
 1. `./makesymlinks.sh`
+
+If `.vimrc` contains any new plugins, run:
+
+    vim +PluginInstall +qall
 
 Notes
 -----
