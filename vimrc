@@ -26,6 +26,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'burnettk/vim-angular'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'nelstrom/vim-mac-classic-theme'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -67,8 +68,10 @@ set wrap " long lines wrap
 
 syntax enable
 filetype plugin indent on " Vim will try to recognize the type of the file and set the 'filetype' option.
-set background=dark " 'dark' or 'light'; the background color brightness
-colorscheme solarized
+"set background=dark " 'dark' or 'light'; the background color brightness
+"colorscheme solarized
+set background=light " 'dark' or 'light'; the background color brightness
+colorscheme mac_classic
 set cursorline " Highlight the screen line of the cursor
 set colorcolumn=80 " Display a pale line 80 chars in (to help maintain reasonable line width)
 autocmd FileType ruby set sw=2 sts=2 et
