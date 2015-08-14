@@ -1,3 +1,5 @@
+# Note: at present this file is only appropriate for OS X.
+
 # Set the colour mode. We want things to look nice.
 export TERM=xterm-256color
 
