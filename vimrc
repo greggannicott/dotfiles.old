@@ -68,8 +68,6 @@ set wrap " long lines wrap
 
 syntax enable
 filetype plugin indent on " Vim will try to recognize the type of the file and set the 'filetype' option.
-"set background=dark " 'dark' or 'light'; the background color brightness
-"colorscheme solarized
 set background=light " 'dark' or 'light'; the background color brightness
 colorscheme mac_classic
 set cursorline " Highlight the screen line of the cursor
