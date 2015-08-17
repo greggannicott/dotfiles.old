@@ -26,7 +26,6 @@ Plugin 'tpope/vim-rails'
 Plugin 'burnettk/vim-angular'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'Raimondi/delimitMate'
 Plugin 'kien/ctrlp.vim'
 
