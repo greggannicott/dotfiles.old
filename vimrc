@@ -36,6 +36,7 @@ Plugin 'othree/html5.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'mattn/emmet-vim'
+Plugin 'sjl/vitality.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
