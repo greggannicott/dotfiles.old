@@ -28,6 +28,14 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-surround'
+Plugin 'groenewege/vim-less'
+Plugin 'skammer/vim-css-color'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'othree/html5.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -229,6 +237,12 @@ let g:dbext_default_buffer_lines = 15
 " fugitive options
 " ----------------
 autocmd QuickFixCmdPost *grep* cwindow " have Glog open the quickfix list
+
+" NERDTree
+" --------
+
+" cltr+n to toggle NERDTree
+map <C-n> :NERDTreeToggle<CR> 
 
 " -------------------------------------------------------------------------------------------------------------------
 " Remappings
