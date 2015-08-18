@@ -35,6 +35,7 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'othree/html5.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'mattn/emmet-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -242,6 +243,12 @@ autocmd QuickFixCmdPost *grep* cwindow " have Glog open the quickfix list
 
 " cltr+n to toggle NERDTree
 map <C-n> :NERDTreeToggle<CR> 
+
+" emmet
+" -----
+
+" Set tab as the expander key for emmet
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " -------------------------------------------------------------------------------------------------------------------
 " Remappings
