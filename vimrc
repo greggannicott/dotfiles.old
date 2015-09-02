@@ -253,8 +253,11 @@ map <C-n> :NERDTreeToggle<CR>
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " -------------------------------------------------------------------------------------------------------------------
-" Remappings
+" Custom Mappings
 " -------------------------------------------------------------------------------------------------------------------
+
+let mapleader = "," " Map a leader key
+let maplocalleader = "\\" " Map a local leader key (\)
 
 " map j to gj and k to gk, so line navigation ignores line wrap
 nmap j gj
@@ -264,11 +267,35 @@ nmap k gk
 nnoremap <F5> "=strftime("%c")<CR>P
 inoremap <F5> <C-R>=strftime("%c")<CR>
 
-" -------------------------------------------------------------------------------------------------------------------
-" Leader key and mapped leader key commands
-" -------------------------------------------------------------------------------------------------------------------
+" leader + u to uppercase current word whilst in insert or normal mode 
+inoremap <leader>u <esc>viwUea
+nnoremap <leader>u viwUe
 
-let mapleader = "," " Map a leader key
+" H and L to go to the start/end of the line.
+nnoremap H ^
+nnoremap L $
+
+" zz to save in normal mode
+nnoremap zz :w<cr>
+
+" Forcing New Habits...
+" The following either replace or remove existing 'bad' mappings.
+" --------------------------
+
+" jk in insert takes you back to normal (a quick way to exit insert)
+" also disable other ways to exit normal (forcing you to use the new way)
+inoremap jk <esc>
+inoremap <esc> <nop>
+inoremap <c-[> <nop>
+
+" Editing vimrc related mappings
+" --------------------------
+
+" leader + ev to open vimrc (in vertical panel)
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+" leader + sv to source vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Markdown related shortcuts:
 " --------------------------
@@ -278,6 +305,19 @@ nnoremap <leader>1 yypVr=
 
 " Insert a line (h2 in Markdown) that equals length of current line
 nnoremap <leader>2 yypVr-
+
+" -------------------------------------------------------------------------------------------------------------------
+" Abbreviations
+" -------------------------------------------------------------------------------------------------------------------
+
+iabbrev teh the
+
+" -------------------------------------------------------------------------------------------------------------------
+" AutoCmds
+" -------------------------------------------------------------------------------------------------------------------
+
+" Enable spellcheck for markdown and text files
+autocmd FileType markdown,text setlocal spell
 
 " -------------------------------------------------------------------------------------------------------------------
 " Provide support for using Vim in ConEmu (with PowerShell)
@@ -306,3 +346,8 @@ elseif has("mac")
     source ~/.vimrc.local
   endif
 endif
+
+" -------------------------------------------------------------------------------------------------------------------
+" Learn Vimscript the Hard Way - Playground
+" -------------------------------------------------------------------------------------------------------------------
+
