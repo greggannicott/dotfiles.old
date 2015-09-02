@@ -281,6 +281,9 @@ nnoremap zz :w<cr>
 " leader gp to Git Push
 nnoremap <leader>gp :Git push<CR>
 
+" leader gs to Gstatus
+nnoremap <leader>gs :Gstatus<CR>
+
 " Forcing New Habits...
 " The following either replace or remove existing 'bad' mappings.
 " --------------------------
