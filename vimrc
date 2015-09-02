@@ -278,6 +278,9 @@ nnoremap L $
 " zz to save in normal mode
 nnoremap zz :w<cr>
 
+" leader gp to Git Push
+nnoremap <leader>gp :Git push<CR>
+
 " Forcing New Habits...
 " The following either replace or remove existing 'bad' mappings.
 " --------------------------
