@@ -264,8 +264,8 @@ inoremap <leader>u <esc>viwUea
 nnoremap <leader>u viwUe
 
 " H and L to go to the start/end of the line.
-nnoremap H ^
-nnoremap L $
+"nnoremap H ^
+"nnoremap L $
 
 " zz to save in normal mode
 nnoremap zz :w<cr>
