@@ -285,6 +285,9 @@ nnoremap <leader>gp :Git push<CR>
 " leader gs to Gstatus
 nnoremap <leader>gs :Gstatus<CR>
 
+" Leader gd to Gdiff
+nnoremap <leader>gd :Gdiff<CR>
+
 " Leader nv to open new vertical window
 nnoremap <leader>nv :vnew<CR>
 
@@ -328,6 +331,7 @@ iabbrev teh the
 
 " Enable spellcheck for markdown and text files
 augroup spellcheck
+    " Clear previous versions of this group:
     autocmd!
     autocmd FileType markdown,text setlocal spell
 augroup END
