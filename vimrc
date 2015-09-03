@@ -164,7 +164,8 @@ set diffopt=vertical " Option settings for diff mode.
 " mapping
 " -------------------------------------------------------------------------------------------------------------------
 
-set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
+set timeoutlen=450  " Time to wait after ESC (default causes an annoying delay).
+                    " Also it's the time between key presses for mappings.
 
 " -------------------------------------------------------------------------------------------------------------------
 " reading and writing files
@@ -284,6 +285,9 @@ nnoremap <leader>gp :Git push<CR>
 " leader gs to Gstatus
 nnoremap <leader>gs :Gstatus<CR>
 
+" Leader nv to open new vertical window
+nnoremap <leader>nv :vnew<CR>
+
 " Forcing New Habits...
 " The following either replace or remove existing 'bad' mappings.
 " --------------------------
@@ -323,7 +327,10 @@ iabbrev teh the
 " -------------------------------------------------------------------------------------------------------------------
 
 " Enable spellcheck for markdown and text files
-autocmd FileType markdown,text setlocal spell
+augroup spellcheck
+    autocmd!
+    autocmd FileType markdown,text setlocal spell
+augroup END
 
 " -------------------------------------------------------------------------------------------------------------------
 " Provide support for using Vim in ConEmu (with PowerShell)
