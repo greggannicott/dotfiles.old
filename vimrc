@@ -61,7 +61,6 @@ set incsearch " highlight pattern matches as you search
 "}}}
 
 " tags --------------------------{{{ 
-
 " }}}
 
 " displaying text --------------------------{{{ 
@@ -95,7 +94,6 @@ set splitright " new vert splits go right
 " }}}
 
 " multiple tab pages --------------------------{{{ 
-
 " }}}
 
 " terminal --------------------------{{{ 
@@ -115,13 +113,9 @@ set mousehide  " Hide mouse after chars typed
 " }}}
 
 " GUI --------------------------{{{ 
-
-
 " }}}
 
 " printing --------------------------{{{ 
-
-
 " }}}
 
 " messages and info --------------------------{{{ 
@@ -134,8 +128,6 @@ set ruler " Show cursor position below each window
 " }}}
 
 " selecting text --------------------------{{{ 
-
-
 " }}}
 
 " editing text --------------------------{{{ 
@@ -155,8 +147,6 @@ set expandtab " In Insert mode: Use the appropriate number of spaces to insert a
 " }}}
 
 " folding --------------------------{{{ 
-
-
 " }}}
 
 " diff mode --------------------------{{{ 
@@ -172,8 +162,6 @@ set timeoutlen=450  " Time to wait after ESC (default causes an annoying delay).
 " }}}
 
 " reading and writing files --------------------------{{{ 
-
-
 " }}}
 
 " the swap file --------------------------{{{ 
@@ -196,23 +184,18 @@ set wildmode=list:longest,full " Specifies how command line completion works
 " }}}
 
 " executing external commands --------------------------{{{ 
-
 " }}}
 
 " running make and jumping to errors --------------------------{{{ 
-
 " }}}
 
 " system specific --------------------------{{{ 
-
 " }}}
 
 " language specific --------------------------{{{ 
-
 " }}}
 
 " multi-byte characters --------------------------{{{ 
-
 " }}}
 
 " various --------------------------{{{ 
