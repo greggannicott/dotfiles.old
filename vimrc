@@ -270,17 +270,11 @@ nnoremap <leader>u viwUe
 " zz to save in normal mode
 nnoremap zz :w<cr>
 
-" leader gp to Git Push
-nnoremap <leader>gp :Git push<CR>
-
-" leader gs to Gstatus
-nnoremap <leader>gs :Gstatus<CR>
-
-" Leader gd to Gdiff
-nnoremap <leader>gd :Gdiff<CR>
-
 " Leader nv to open new vertical window
 nnoremap <leader>nv :vnew<CR>
+
+" Leader ; to append a semicolon to the current line
+nnoremap <leader>; mqA;<esc>`q
 
 " Forcing New Habits...
 " The following either replace or remove existing 'bad' mappings.
@@ -309,6 +303,19 @@ nnoremap <leader>1 yypVr=
 
 " Insert a line (h2 in Markdown) that equals length of current line
 nnoremap <leader>2 yypVr-
+
+" Git related shortcuts:
+" --------------------------
+
+" leader gp to Git Push
+nnoremap <leader>gp :Git push<CR>
+
+" leader gs to Gstatus
+nnoremap <leader>gs :Gstatus<CR>
+
+" Leader gd to Gdiff
+nnoremap <leader>gd :Gdiff<CR>
+
 
 " }}}
 
