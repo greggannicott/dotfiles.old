@@ -286,7 +286,7 @@ inoremap jk <esc>
 inoremap <esc> <nop>
 inoremap <c-[> <nop>
 
-" Editing vimrc related mappings
+" Editing vim files mappings
 " --------------------------
 
 " leader + ev to open vimrc (in vertical panel)
@@ -294,6 +294,9 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " leader + sv to source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" leader + s to save and source current file
+nnoremap <leader>s :w<cr>:source %<cr>
 
 " Markdown related shortcuts:
 " --------------------------
