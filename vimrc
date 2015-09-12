@@ -3,13 +3,11 @@
 " Use `zR` to open all folds.
 " Use `zM` to close all folds.
 
-" important --------------------------{{{ 
+" important {{{1
 
 set nocompatible " Use Vim's new abilities (ie. don't act like vi)
 
-" }}}
-
-" plugin management --------------------------{{{ 
+" plugin management {{{1
 
 filetype off
 
@@ -49,21 +47,18 @@ filetype plugin indent on    " required
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve
-
-" }}}
  
-" moving around, searching and patterns {{{
+" moving around, searching and patterns {{{1
+
 set wrapscan " Continue search when bottom of document has been reached.
 set hlsearch " highlight all matches for the last used search pattern
 set ignorecase " ignore case when using a search pattern
 set smartcase " override 'ignorecase' when pattern has upper case characters
 set incsearch " highlight pattern matches as you search
-"}}}
 
-" tags --------------------------{{{ 
-" }}}
+" tags {{{1
 
-" displaying text --------------------------{{{ 
+" displaying text {{{1
 
 set number " Display line numbers.
 set relativenumber " Display relative rather than absolute numbers. Makes jumping down/up lines with n+j or n+k much easier.
@@ -71,9 +66,7 @@ set relativenumber " Display relative rather than absolute numbers. Makes jumpin
 set scrolloff=3 " Number of screen lines to show around the cursor.
 set wrap " long lines wrap
 
-" }}}
-
-" syntax, highlighting and spelling --------------------------{{{ 
+" syntax, highlighting and spelling {{{1
 
 syntax enable
 filetype plugin indent on " Vim will try to recognize the type of the file and set the 'filetype' option.
@@ -83,88 +76,65 @@ set cursorline " Highlight the screen line of the cursor
 set colorcolumn=80 " Display a pale line 80 chars in (to help maintain reasonable line width)
 autocmd FileType ruby set sw=2 sts=2 et
 
-" }}}
-
-" multiple windows --------------------------{{{ 
+" multiple windows {{{1
 
 set laststatus=2 " 0, 1 or 2; when to use a status line for the last window (Always display status bar)
 set splitbelow " new hoz splits go below
 set splitright " new vert splits go right
 
-" }}}
+" multiple tab pages {{{1
 
-" multiple tab pages --------------------------{{{ 
-" }}}
-
-" terminal --------------------------{{{ 
+" terminal {{{1
 
 set ttyfast " Terminal connection is fast (smooth scrolling)
 if !has("Win32")
   set term=screen-256color
 endif
 
-" }}}
-
-" using the mouse --------------------------{{{ 
+" using the mouse {{{1
 
 set mouse=a  " Mouse in all modes
 set mousehide  " Hide mouse after chars typed
 
-" }}}
+" GUI {{{1
 
-" GUI --------------------------{{{ 
-" }}}
+" printing {{{1
 
-" printing --------------------------{{{ 
-" }}}
-
-" messages and info --------------------------{{{ 
+" messages and info {{{1
 
 set cf " Start a dialog when a command fails
 set showmode " Display the current mode in the status line
 set showcmd " Show (partial / incomplete) command keys in the status line
 set ruler " Show cursor position below each window
 
-" }}}
+" selecting text {{{1
 
-" selecting text --------------------------{{{ 
-" }}}
-
-" editing text --------------------------{{{ 
+" editing text {{{1
 
 set nosm  " when inserting a bracket, do NOT briefly jump to it's match
 set backspace=indent,eol,start " specifies what <BS>, CTRL-W, etc. can do in Insert mode
 set formatoptions=qrn1 " list of flags that tell how automatic formatting works
 
-" }}}
-
-" tabs and indenting --------------------------{{{ 
+" tabs and indenting {{{1
 
 set tabstop=4 " Number of spaces that a <Tab> in the file counts for.
 set shiftwidth=4 " Number of spaces to use for each step of (auto)indent. Used for 'cindent', >>, <<, etc.
 set expandtab " In Insert mode: Use the appropriate number of spaces to insert a <Tab>.
 
-" }}}
+" folding {{{1
 
-" folding --------------------------{{{ 
-" }}}
-
-" diff mode --------------------------{{{ 
+" diff mode {{{1
 
 set diffopt=vertical " Option settings for diff mode.
 
-" }}}
-
-" mapping --------------------------{{{ 
+" mapping {{{1
 
 set timeoutlen=450  " Time to wait after ESC (default causes an annoying delay).
                     " Also it's the time between key presses for mappings.
-" }}}
 
-" reading and writing files --------------------------{{{ 
-" }}}
+" reading and writing files {{{1
 
-" the swap file --------------------------{{{ 
+" the swap file {{{1
 
 " Determine where to put swap files
 if has("win32") || has("win64")
@@ -173,48 +143,32 @@ else
    set directory=/tmp
 end 
 
-" }}}
-
-" command line editing --------------------------{{{ 
+" command line editing {{{1
 
 set history=256  " How many command lines are remembered.
 set wildmenu " Command-line completion shows a list of matches.
 set wildmode=list:longest,full " Specifies how command line completion works
 
-" }}}
+" executing external commands {{{1
 
-" executing external commands --------------------------{{{ 
-" }}}
+" running make and jumping to errors {{{1
 
-" running make and jumping to errors --------------------------{{{ 
-" }}}
+" system specific {{{1
 
-" system specific --------------------------{{{ 
-" }}}
+" language specific {{{1
 
-" language specific --------------------------{{{ 
-" }}}
+" multi-byte characters {{{1
 
-" multi-byte characters --------------------------{{{ 
-" }}}
-
-" various --------------------------{{{ 
+" various {{{1
 
 set virtualedit+=block " Allow moving after the end of the line in visual block mode
 set gdefault " Apply global substitutions on all lines by default
 
-" }}}
+" Other - ie. couldn't find a home above... {{{1
 
-" Other - ie. couldn't find a home above... --------------------------{{{ 
-
-" Use standard windows shortcuts (eg. ctrl x, ctrl c, ctrl v). See `h: gui_w32` /mswin.vim for details.
-source $VIMRUNTIME/mswin.vim
-behave mswin	
 set nobackup " Do not generate the ~files
 
-" }}}
-
-" Plugin specific options --------------------------{{{ 
+" Plugin specific options {{{1
 
 " dbext options
 " -------------
@@ -227,12 +181,6 @@ let g:dbext_default_buffer_lines = 15
 " ----------------
 autocmd QuickFixCmdPost *grep* cwindow " have Glog open the quickfix list
 
-" NERDTree
-" --------
-
-" cltr+n to toggle NERDTree
-map <C-n> :NERDTreeToggle<CR> 
-
 " emmet
 " -----
 
@@ -244,9 +192,8 @@ imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 let delimitMate_excluded_ft = "vim"
 
-" }}}
 
-" Custom Mappings --------------------------{{{ 
+" Custom Mappings {{{1
 
 let mapleader = "," " Map a leader key
 let maplocalleader = "\\" " Map a local leader key (\)
@@ -275,16 +222,6 @@ nnoremap <leader>nv :vnew<CR>
 
 " Leader ; to append a semicolon to the current line
 nnoremap <leader>; mqA;<esc>`q
-
-" Forcing New Habits...
-" The following either replace or remove existing 'bad' mappings.
-" --------------------------
-
-" jk in insert takes you back to normal (a quick way to exit insert)
-" also disable other ways to exit normal (forcing you to use the new way)
-inoremap jk <esc>
-inoremap <esc> <nop>
-inoremap <c-[> <nop>
 
 " Editing vim files mappings
 " --------------------------
@@ -319,16 +256,11 @@ nnoremap <leader>gs :Gstatus<CR>
 " Leader gd to Gdiff
 nnoremap <leader>gd :Gdiff<CR>
 
-
-" }}}
-
-" Abbreviations --------------------------{{{ 
+" Abbreviations {{{1
 
 iabbrev teh the
 
-" }}}
-
-" AutoCmds --------------------------{{{ 
+" AutoCmds {{{1
 
 " Enable spellcheck for markdown and text files
 augroup spellcheck
@@ -343,9 +275,7 @@ augroup filetype_vim
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
-" }}}
-
-" Provide support for using Vim in ConEmu (with PowerShell)  --------------------------{{{ 
+" Provide support for using Vim in ConEmu (with PowerShell)  {{{1
 
 if !empty($CONEMUBUILD)
     set term=xterm
@@ -358,9 +288,7 @@ if !empty($CONEMUBUILD)
     colorscheme solarized
 endif
 
-" }}}
-
-" Provide a way to overide these settings locally by creating a '.local' file. --------------------------{{{ 
+" Provide a way to overide these settings locally by creating a '.local' file. {{{1
 if has("Win32")
   if filereadable(expand("$VIM/_vimrc.local"))
     source $VIM/_vimrc.local
@@ -370,5 +298,3 @@ elseif has("mac")
     source ~/.vimrc.local
   endif
 endif
-
-" }}}
