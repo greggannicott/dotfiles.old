@@ -37,7 +37,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'mattn/emmet-vim'
 Plugin 'sjl/vitality.vim'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'KabbAmine/gulp-vim'
+Plugin 'tpope/vim-dispatch'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -261,6 +261,12 @@ nnoremap <leader>gs :Gstatus<CR>
 
 " Leader gd to Gdiff
 nnoremap <leader>gd :Gdiff<CR>
+
+" Gulp related shortcuts:
+" -----------------------
+
+" leader l to compile less
+nnoremap <leader>l :Dispatch! gulp compile-less<CR>
 
 " Abbreviations {{{1
 
