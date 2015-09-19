@@ -192,6 +192,11 @@ imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 let delimitMate_excluded_ft = "vim"
 
+" cltrp
+" -----
+
+set wildignore+=*/node_modules/*
+
 
 " Custom Mappings {{{1
 
