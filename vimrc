@@ -197,6 +197,7 @@ let delimitMate_excluded_ft = "vim"
 " -----
 
 set wildignore+=*/node_modules/*
+set wildignore+=*/bower_components/*
 
 
 " Custom Mappings {{{1
