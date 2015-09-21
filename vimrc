@@ -287,6 +287,12 @@ augroup filetype_vim
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
+" Compile less when a less file is saved.
+augroup filetype_less
+    autocmd!
+    autocmd BufWritePost *.less Dispatch! gulp compile-less
+augroup END
+
 " Provide support for using Vim in ConEmu (with PowerShell)  {{{1
 
 if !empty($CONEMUBUILD)
