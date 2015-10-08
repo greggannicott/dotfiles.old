@@ -216,6 +216,8 @@ inoremap <F5> <C-R>=strftime("%c")<CR>
 inoremap <leader>u <esc>viwUea
 nnoremap <leader>u viwUe
 
+nnoremap <leader>o :only<cr>
+
 " H and L to go to the start/end of the line.
 "nnoremap H ^
 "nnoremap L $
