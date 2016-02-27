@@ -37,6 +37,7 @@ Plugin 'sjl/vitality.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-dispatch'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'rizzatti/dash.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
