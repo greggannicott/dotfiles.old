@@ -296,6 +296,12 @@ augroup filetype_less
     autocmd BufWritePost *.less Dispatch! gulp compile-less
 augroup END
 
+" Compile javascript when a javascript file is saved.
+augroup filetype_javascript
+    autocmd!
+    autocmd BufWritePost *.js Dispatch! gulp compile-javascript
+augroup END
+
 " Provide support for using Vim in ConEmu (with PowerShell)  {{{1
 
 if !empty($CONEMUBUILD)
