@@ -38,6 +38,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-dispatch'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rizzatti/dash.vim'
+Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -199,6 +200,29 @@ let delimitMate_excluded_ft = "vim"
 set wildignore+=*/node_modules/*
 set wildignore+=*/bower_components/*
 
+" Syntactic
+" ---------
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers = ['eslint']
+
+let g:syntastic_error_symbol = '❌'
+let g:syntastic_style_error_symbol = '⁉️'
+let g:syntastic_warning_symbol = '⚠️'
+let g:syntastic_style_warning_symbol = '💩'
+
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
+highlight link SyntasticStyleErrorSign SignColumn
+highlight link SyntasticStyleWarningSign SignColumn
 
 " Custom Mappings {{{1
 
