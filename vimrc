@@ -210,16 +210,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
 
-let g:syntastic_error_symbol = '❌'
-let g:syntastic_style_error_symbol = '⁉️'
-let g:syntastic_warning_symbol = '⚠️'
-let g:syntastic_style_warning_symbol = '💩'
-
-highlight link SyntasticErrorSign SignColumn
-highlight link SyntasticWarningSign SignColumn
-highlight link SyntasticStyleErrorSign SignColumn
-highlight link SyntasticStyleWarningSign SignColumn
-
 " Custom Mappings {{{1
 
 let mapleader = "," " Map a leader key
@@ -239,10 +229,6 @@ nnoremap <leader>u viwUe
 
 nnoremap <leader>o :only<cr>
 
-" H and L to go to the start/end of the line.
-"nnoremap H ^
-"nnoremap L $
-
 " zz to save in normal mode
 nnoremap zz :w<cr>
 
@@ -251,6 +237,24 @@ nnoremap <leader>nv :vnew<CR>
 
 " Leader ; to append a semicolon to the current line
 nnoremap <leader>; mqA;<esc>`q
+
+" Error List mappings
+" -------------------
+
+" Leader ee to jump to next error (quick and simply to hit, harder to remember)
+nnoremap <leader>ee :lnext<cr>
+
+" Leader ne to jump to next error (hard to hit, easier to remember)
+nnoremap <leader>ne :lnext<cr>
+
+" Leader EE to jump to previous error (quick and simply to hit, harder to remember)
+nnoremap <leader>EE :lprev<cr>
+
+" Leader pe to jump to previous error (hard to hit, easier to remember)
+nnoremap <leader>pe :lprev<cr>
+
+" Leader se to display error list
+nnoremap <leader>se :Errors<cr>
 
 " Editing vim files mappings
 " --------------------------
