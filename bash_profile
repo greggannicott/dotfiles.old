@@ -27,4 +27,6 @@ parse_git_branch() {
 export PS1="\w\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 # Used by MacPorts:
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
