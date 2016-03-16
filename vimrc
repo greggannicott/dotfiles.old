@@ -210,6 +210,10 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
 
+let g:syntastic_mode_map={ 'mode': 'active',
+                     \ 'active_filetypes': [],
+                     \ 'passive_filetypes': ['html'] }
+
 " Custom Mappings {{{1
 
 let mapleader = "," " Map a leader key
@@ -255,6 +259,15 @@ nnoremap <leader>pe :lprev<cr>
 
 " Leader se to display error list
 nnoremap <leader>se :Errors<cr>
+
+" Quick List results
+" ------------------
+
+" Leader ns to go to next item in Quick List (eg. grep result)
+nnoremap <leader>ns :cn<cr>
+
+" Leader ps to go to previous item in Quick List (eg. grep result)
+nnoremap <leader>ps :cN<cr>
 
 " Editing vim files mappings
 " --------------------------
