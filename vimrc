@@ -15,6 +15,10 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" Code to run before plugins load
+
+let g:angular_skip_alternate_mappings = 1
+
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
@@ -39,6 +43,7 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rizzatti/dash.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-projectionist'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
