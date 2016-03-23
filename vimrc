@@ -44,6 +44,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rizzatti/dash.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-projectionist'
+Plugin 'buztard/vim-rel-jump'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
