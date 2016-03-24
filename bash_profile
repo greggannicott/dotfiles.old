@@ -16,7 +16,11 @@ export EDITOR=vim
 alias l='ls -la'
 
 # Enable tab complete for git.
-source ~/git-completion.bash
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+
+source ~/.git-completion.bash
 
 # Used to include Git branch in prompt.
 parse_git_branch() {
@@ -30,3 +34,5 @@ export PS1="\w\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
