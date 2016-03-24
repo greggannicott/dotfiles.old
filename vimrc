@@ -18,6 +18,7 @@ call vundle#begin()
 " Code to run before plugins load
 
 let g:angular_skip_alternate_mappings = 1
+set rtp+=~/.fzf
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -45,6 +46,7 @@ Plugin 'rizzatti/dash.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-projectionist'
 Plugin 'buztard/vim-rel-jump'
+Plugin 'junegunn/fzf.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -220,6 +222,15 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'active_filetypes': [],
                      \ 'passive_filetypes': ['html'] }
+
+" fzf
+" ---
+
+" Insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
 
 " Custom Mappings {{{1
 
