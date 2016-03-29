@@ -48,6 +48,8 @@ Plugin 'tpope/vim-projectionist'
 Plugin 'buztard/vim-rel-jump'
 Plugin 'junegunn/fzf.vim'
 Plugin 'craigemery/vim-autotag'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets' " snippets for ultisnips
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -232,6 +234,13 @@ imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-j> <plug>(fzf-complete-file-ag)
 imap <c-x><c-l> <plug>(fzf-complete-line)
+
+" ultisnips (snippets)
+" --------------------
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Custom Mappings {{{1
 
