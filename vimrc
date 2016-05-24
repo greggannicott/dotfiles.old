@@ -297,6 +297,16 @@ nnoremap <leader>ns :cn<cr>
 " Leader ps to go to previous item in Quick List (eg. grep result)
 nnoremap <leader>ps :cN<cr>
 
+" Tab navigation mappings
+" -----------------------
+
+" Leader . to go to next tab.
+nnoremap <leader>. :tabnext<cr>
+
+" Leader m to go to next tab.
+nnoremap <leader>m :tabprev<cr>
+
+
 " Editing vim files mappings
 " --------------------------
 
