@@ -35,21 +35,16 @@ Plugin 'tpope/vim-surround'
 Plugin 'groenewege/vim-less'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'othree/html5.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'mattn/emmet-vim'
-Plugin 'sjl/vitality.vim'
+Plugin 'sjl/vitality.vim' " make vim play nicely with tmux
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-dispatch'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'rizzatti/dash.vim'
-Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-projectionist'
 Plugin 'buztard/vim-rel-jump'
-Plugin 'junegunn/fzf.vim'
 Plugin 'craigemery/vim-autotag'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets' " snippets for ultisnips
+Plugin 'mileszs/ack.vim'    " interface to ag/Silver Searcher
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -183,27 +178,9 @@ set nobackup " Do not generate the ~files
 
 " Plugin specific options {{{1
 
-" dbext options
-" -------------
-
-let g:dbext_default_use_sep_result_buffer = 1
-let g:dbext_default_window_width = 136
-let g:dbext_default_buffer_lines = 15
-
 " fugitive options
 " ----------------
 autocmd QuickFixCmdPost *grep* cwindow " have Glog open the quickfix list
-
-" emmet
-" -----
-
-" Set tab as the expander key for emmet
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
-
-" delimitMate
-" -----------
-
-let delimitMate_excluded_ft = "vim"
 
 " cltrp
 " -----
@@ -211,36 +188,20 @@ let delimitMate_excluded_ft = "vim"
 set wildignore+=*/node_modules/*
 set wildignore+=*/bower_components/*
 
-" Syntactic
-" ---------
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_javascript_checkers = ['eslint']
-
-" Prevent html files showing syntastic errors:
-let g:syntastic_mode_map={ 'mode': 'active',
-                     \ 'active_filetypes': [],
-                     \ 'passive_filetypes': ['html'] }
-
-" fzf
-" ---
-
-" Insert mode completion
-imap <c-x><c-k> <plug>(fzf-complete-word)
-imap <c-x><c-f> <plug>(fzf-complete-path)
-imap <c-x><c-j> <plug>(fzf-complete-file-ag)
-imap <c-x><c-l> <plug>(fzf-complete-line)
-
 " ultisnips (snippets)
 " --------------------
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" ack
+" ---
+
+" Enable ack to use ag (Silver Searcher)
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
 
 " Custom Mappings {{{1
 
