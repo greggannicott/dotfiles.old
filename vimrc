@@ -45,6 +45,7 @@ Plugin 'craigemery/vim-autotag'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets' " snippets for ultisnips
 Plugin 'mileszs/ack.vim'    " interface to ag/Silver Searcher
+Plugin 'MichaelRFairhurst/angular-dep.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
