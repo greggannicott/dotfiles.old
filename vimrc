@@ -46,6 +46,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets' " snippets for ultisnips
 Plugin 'mileszs/ack.vim'    " interface to ag/Silver Searcher
 Plugin 'MichaelRFairhurst/angular-dep.vim'
+Plugin 'w0rp/ale'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -203,6 +204,13 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 if executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
+
+" ale
+" ---
+
+let g:ale_fixers = {
+  \ 'javascript': ['eslint']
+  \ }
 
 " Custom Mappings {{{1
 
