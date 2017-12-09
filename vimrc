@@ -46,7 +46,9 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets' " snippets for ultisnips
 Plugin 'mileszs/ack.vim'    " interface to ag/Silver Searcher
 Plugin 'MichaelRFairhurst/angular-dep.vim'
-Plugin 'w0rp/ale'
+Plugin 'w0rp/ale' " async js lint engine
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'ternjs/tern_for_vim' " provides JS support for YouCompleteMe
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -193,7 +195,7 @@ set wildignore+=*/bower_components/*
 " ultisnips (snippets)
 " --------------------
 
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<c-j>" " Expand the snippet when using YouCompleteMe
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
