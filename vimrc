@@ -18,7 +18,7 @@ call vundle#begin()
 " Code to run before plugins load
 
 let g:angular_skip_alternate_mappings = 1
-set rtp+=~/.fzf
+set rtp+=/usr/local/opt/fzf
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -38,7 +38,6 @@ Plugin 'othree/html5.vim'
 Plugin 'sjl/vitality.vim' " make vim play nicely with tmux
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-dispatch'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-projectionist'
 Plugin 'buztard/vim-rel-jump'
 Plugin 'craigemery/vim-autotag'
@@ -49,6 +48,8 @@ Plugin 'MichaelRFairhurst/angular-dep.vim'
 Plugin 'w0rp/ale' " async js lint engine
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ternjs/tern_for_vim' " provides JS support for YouCompleteMe
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -317,6 +318,29 @@ nnoremap <leader>gd :Gdiff<CR>
 
 " leader l to compile less
 nnoremap <leader>l :Dispatch! gulp compile-less<CR>
+
+" fzf mappings
+" ------------
+
+" The following are based on:
+" https://jesseleite.com/posts/2/its-dangerous-to-vim-alone-take-fzf
+
+nmap <c-p> :GFiles<CR> " Search files held in git
+nmap <Leader>F :Files<CR> " Search all files
+nmap <Leader>b :Buffers<CR> " Search open buffers
+nmap <Leader>h :History<CR> " Search buffer history
+nmap <Leader>t :BTags<CR> " Search tags in current buffer
+nmap <Leader>T :Tags<CR> " Search tags across project (requires a tag file)
+nmap <Leader>l :BLines<CR> " Search lines in current buffer
+nmap <Leader>L :Lines<CR> " Search lines in loaded buffers
+nmap <Leader>' :Marks<CR> " Search marked lines
+nmap <Leader>H :Helptags!<CR> " Search Help
+nmap <Leader>: :History:<CR> " Search command history
+nmap <Leader>/ :History/<CR> " Search /search history
+nmap <Leader>M :Maps<CR> " Search key mappings
+
+" More inspiration here:
+" https://github.com/junegunn/fzf.vim#commands
 
 " Abbreviations {{{1
 
