@@ -338,6 +338,7 @@ nmap <Leader>H :Helptags!<CR> " Search Help
 nmap <Leader>: :History:<CR> " Search command history
 nmap <Leader>/ :History/<CR> " Search /search history
 nmap <Leader>M :Maps<CR> " Search key mappings
+nmap <Leader>a :Ag<Space>
 
 " More inspiration here:
 " https://github.com/junegunn/fzf.vim#commands
